@@ -38,7 +38,11 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>            
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <ContentControl prism:RegionManager.RegionName="SimulatorRegion" Margin="5"/>
+                <ContentControl prism:RegionManager.RegionName="IntransitListRegion" Margin="5"/>
+            </StackPanel>
             <Grid Grid.Column="1" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -51,11 +55,16 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <ContentControl Grid.Row="0" Grid.Column="0" prism:RegionManager.RegionName="WorkstationTabRegion" Margin="5" Height="150"/>
-                <Border Grid.Row="0" Grid.Column="1" BorderBrush="White" BorderThickness="1,1,1,1" Margin="5" Height="150" Width="170">
+                <!--<Border Grid.Row="0" Grid.Column="1" BorderBrush="White" BorderThickness="1,1,1,1" Margin="5" Height="150" Width="170">
                     <StackPanel Background="DimGray">
                         <TextBlock Text="NO IMAGE" Foreground="LightGray" TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold" FontSize="16" Margin="45,50,10,0"/>
                         <TextBlock Text="AVAILABLE" Foreground="LightGray" TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold" FontSize="16" Margin="45,0,10,10"/>
-                    </StackPanel></Border>
+                    </StackPanel></Border>-->
+                <Border Grid.Row="0" Grid.Column="1" BorderThickness="2" BorderBrush="Gray" Background="DimGray" Width="150">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="ERROR LOADING IMAGE" Foreground="White" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Arial" FontSize="16"/>
+                    </StackPanel>
+                </Border>
                 <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="TruckInDetailsRegion" Margin="5"/>
                 <ContentControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="GradeTemplateRegion" Margin="5"/>
                 <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  Orientation="Horizontal">
