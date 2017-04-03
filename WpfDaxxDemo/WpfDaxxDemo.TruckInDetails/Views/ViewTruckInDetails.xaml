@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="WpfDaxxDemo.TruckInDetails.Views.ViewTruckInDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfDaxxDemo.TruckInDetails.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+    <UserControl.Resources>
+        <Style TargetType="TextBox" >
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5,0,5,5"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="DimGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Truck in Details" Style="{StaticResource CaptionText}"/>
+        <ComboBox Grid.Row="0" Grid.Column="1" SelectedIndex="0" Style="{StaticResource YellowComboBox}">
+            <ComboBoxItem Style="{StaticResource YellowComboBoxItem}">To Out</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="historyButton" Grid.Row="0" Grid.Column="2" Style="{StaticResource YellowButton}" IsEnabled="False">History</Button>
+        <Button x:Name="detailsButton" Grid.Row="0" Grid.Column="3" Style="{StaticResource YellowButton}">Details</Button>
+        <Grid Grid.Row="1" Grid.ColumnSpan="4" Background="#FFE5E5E5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Truck ID" Style="{StaticResource RedText}" Margin="5,5,5,0"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Delivery #" Style="{StaticResource RedText}" Margin="5,5,5,0"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="Driver" Style="{StaticResource RedText}" Margin="5,5,5,0" Grid.ColumnSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="0" Text="5638" />
+            <TextBox Grid.Row="1" Grid.Column="1" Text="4468" />
+            <TextBox Grid.Row="1" Grid.Column="2" Text="JACK" Grid.ColumnSpan="2" />
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Product Code"  Style="{StaticResource RedText}"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="Product Description" Style="{StaticResource RedText}"/>
+            <TextBox Grid.Row="3" Grid.Column="0" Text="DU" />
+            <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Text="DURUM WHEAT" />
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Bin" Style="{StaticResource RedText}"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="Tag ID" Style="{StaticResource RedText}"/>
+            <TextBox Grid.Row="5" Grid.Column="0"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Text="E2003411B802011564385639" IsEnabled="False"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Customer Code" Style="{StaticResource RedText}"/>
+            <TextBlock Grid.Row="6" Grid.Column="1" Text="Customer Name" Style="{StaticResource RedText}"/>
+            <TextBox Grid.Row="7" Grid.Column="0" Text="00000144" />
+            <TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Text="BAIRD JACK" />
+            <TextBlock Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Text="Notes" Style="{StaticResource RedText}"/>
+            <TextBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Text="THIS IS A PROBE STATION" />
+            <Grid Grid.Row="10" Grid.ColumnSpan="3" Background="DarkGray">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Gross Weight" Style="{StaticResource RedText}"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Tare Weight" Style="{StaticResource RedText}"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Net Weight" Style="{StaticResource RedText}"/>
+                <TextBox Grid.Row="1" Grid.Column="0" Text="75,980" />
+                <TextBox Grid.Row="1" Grid.Column="1" Text="" />
+                <TextBox Grid.Row="1" Grid.Column="2" Text="" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

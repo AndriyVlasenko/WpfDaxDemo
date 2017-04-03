@@ -1,0 +1,52 @@
+﻿<ResourceDictionary
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" >
+    <Style x:Key="YellowButton" TargetType="Button">
+        <Setter Property="Background" Value="#FFEDE9A5"/>
+        <Setter Property="Margin" Value="1,1"/>
+        <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    <Style x:Key="YellowComboBox" TargetType="ComboBox">
+        <Setter Property="Background" Value="#FFEDE9A5"/>
+        <Setter Property="Margin" Value="1,1"/>
+        <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    <Style x:Key="YellowComboBoxItem" TargetType="ComboBoxItem">
+        <Setter Property="Background" Value="#FFEDE9A5"/>
+        <Setter Property="Margin" Value="1,1"/>
+        <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    <Style x:Key="OrdinaryText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5,0"/>
+        <!--<Setter Property="VerticalAlignment" Value="Center"/>-->
+    </Style>
+    <Style x:Key="RedText" TargetType="TextBlock" BasedOn="{StaticResource OrdinaryText}">
+        <Setter Property="Foreground" Value="#FF88323F"/>
+    </Style>
+    <Style x:Key="CheckBoxRedText" TargetType="CheckBox">
+        <Setter Property="Foreground" Value="#FF88323F"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <Style x:Key="CaptionText" TargetType="TextBlock" BasedOn="{StaticResource OrdinaryText}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    <Style x:Key="GradeTextBox" TargetType="TextBox">
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+</ResourceDictionary>

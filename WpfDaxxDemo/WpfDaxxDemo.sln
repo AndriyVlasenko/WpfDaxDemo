@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDaxxDemo.Shell", "WpfDaxxDemo.Shell\WpfDaxxDemo.Shell.csproj", "{4A95907C-6CC9-4C89-9C4F-782B756571B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDaxxDemo.Workstation", "WpfDaxxDemo.Workstation\WpfDaxxDemo.Workstation.csproj", "{98CB6E8F-CC96-4239-88E6-9C2FD2212660}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDaxxDemo.TruckInDetails", "WpfDaxxDemo.TruckInDetails\WpfDaxxDemo.TruckInDetails.csproj", "{4769D3DE-30F3-4AEA-81A4-766E2E8EFBC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDaxxDemo.GradeTemplate", "WpfDaxxDemo.GradeTemplate\WpfDaxxDemo.GradeTemplate.csproj", "{FA8117ED-FEAC-4C56-A08C-286FD6D10764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDaxxDemo.IntransitList", "WpfDaxxDemo.IntransitList\WpfDaxxDemo.IntransitList.csproj", "{C37DBB4F-657A-4950-A4E6-81825B9FADA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDaxxDemo.Simulator", "WpfDaxxDemo.Simulator\WpfDaxxDemo.Simulator.csproj", "{AADAF722-7D61-4952-BE92-AEF35B30ED24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A95907C-6CC9-4C89-9C4F-782B756571B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A95907C-6CC9-4C89-9C4F-782B756571B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A95907C-6CC9-4C89-9C4F-782B756571B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A95907C-6CC9-4C89-9C4F-782B756571B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CB6E8F-CC96-4239-88E6-9C2FD2212660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CB6E8F-CC96-4239-88E6-9C2FD2212660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CB6E8F-CC96-4239-88E6-9C2FD2212660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CB6E8F-CC96-4239-88E6-9C2FD2212660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4769D3DE-30F3-4AEA-81A4-766E2E8EFBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4769D3DE-30F3-4AEA-81A4-766E2E8EFBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4769D3DE-30F3-4AEA-81A4-766E2E8EFBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4769D3DE-30F3-4AEA-81A4-766E2E8EFBC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA8117ED-FEAC-4C56-A08C-286FD6D10764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA8117ED-FEAC-4C56-A08C-286FD6D10764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA8117ED-FEAC-4C56-A08C-286FD6D10764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA8117ED-FEAC-4C56-A08C-286FD6D10764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37DBB4F-657A-4950-A4E6-81825B9FADA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37DBB4F-657A-4950-A4E6-81825B9FADA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37DBB4F-657A-4950-A4E6-81825B9FADA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37DBB4F-657A-4950-A4E6-81825B9FADA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADAF722-7D61-4952-BE92-AEF35B30ED24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADAF722-7D61-4952-BE92-AEF35B30ED24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADAF722-7D61-4952-BE92-AEF35B30ED24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADAF722-7D61-4952-BE92-AEF35B30ED24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

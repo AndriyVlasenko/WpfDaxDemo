@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="WpfDaxxDemo.Workstation.Views.ViewWorkstationTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfDaxxDemo.Workstation.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="DimGray">
+        <TabControl x:Name="tabControl">
+            <TabItem Header="Status">
+                <Grid Background="#FFE5E5E5">
+                    <ContentControl Grid.Column="1" prism:RegionManager.RegionName="WorkstationRegion"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="GAC">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="AutoKicker">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="PERTEN">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>

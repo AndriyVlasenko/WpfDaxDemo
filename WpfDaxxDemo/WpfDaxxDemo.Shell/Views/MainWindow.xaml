@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfDaxxDemo.Shell.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:local="clr-namespace:WpfDaxxDemo.Shell"
+        mc:Ignorable="d"
+        Title="Demo" Background="#FF008081">
+    <Window.Resources>
+        <Style TargetType="MenuItem">
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="FontFamily" Value="Arial Rounded MT Bold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Margin="5,5,0,5" Name="MainMenu">
+            <MenuItem Header="Data" Command="{Binding DataCommand}"/>
+            <MenuItem Header="Options" Command="{Binding OptionsCommand}"/>
+            <MenuItem Header="Reports" Command="{Binding ReportsCommand}"/>
+            <MenuItem Header="Reprint" Command="{Binding ReprintCommand}"/>
+            <MenuItem Header="Analysis" Command="{Binding AnalysisCommand}"/>
+            <MenuItem Header="Tools" Command="{Binding ToolsCommand}"/>
+            <MenuItem Header="WorkStations" Command="{Binding WorkStationsCommand}" FontWeight="Bold"/>
+            <MenuItem Header="Help" Command="{Binding HelpCommand}"/>
+        </Menu>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CurrentTime,Mode=TwoWay}" Margin="0,5,2,5" Background="{Binding ElementName=MainMenu, Path=Background}"/>
+        <Grid  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>            
+            <Grid Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ContentControl Grid.Row="0" Grid.Column="0" prism:RegionManager.RegionName="WorkstationTabRegion" Margin="5" Height="150"/>
+                <Border Grid.Row="0" Grid.Column="1" BorderBrush="White" BorderThickness="1,1,1,1" Margin="5" Height="150" Width="170">
+                    <StackPanel Background="DimGray">
+                        <TextBlock Text="NO IMAGE" Foreground="LightGray" TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold" FontSize="16" Margin="45,50,10,0"/>
+                        <TextBlock Text="AVAILABLE" Foreground="LightGray" TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold" FontSize="16" Margin="45,0,10,10"/>
+                    </StackPanel></Border>
+                <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="TruckInDetailsRegion" Margin="5"/>
+                <ContentControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="GradeTemplateRegion" Margin="5"/>
+                <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  Orientation="Horizontal">
+                    <Button Style="{StaticResource YellowButton}">F9 - New</Button>
+                    <Button Style="{StaticResource YellowButton}">Esc - Exit </Button>
+                    <Button Style="{StaticResource YellowButton}">Expand</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

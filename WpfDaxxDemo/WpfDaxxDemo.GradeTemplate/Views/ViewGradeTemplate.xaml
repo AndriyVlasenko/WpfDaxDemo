@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="WpfDaxxDemo.GradeTemplate.Views.ViewGradeTemplate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfDaxxDemo.GradeTemplate.Views"
+             xmlns:uc="clr-namespace:WpfDaxxDemo.GradeTemplate.UserControls"
+             mc:Ignorable="d" 
+             >
+    <Grid Background="DimGray" Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="F12 - Grade Template (Sample # 318)" Style="{StaticResource CaptionText}"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Add Grade Factor" Style="{StaticResource CaptionText}"/>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#FFE5E5E5" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <WrapPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+                <uc:GradeTemplateControl Label="TW"/>
+                <uc:GradeTemplateControl Label="WOCL"/>
+                <uc:GradeTemplateControl Label="FM"/>
+                <uc:GradeTemplateControl Label="HT"/>
+                <uc:GradeTemplateControl Label="CCL"/>
+                <uc:GradeTemplateControl Label="DE"/>
+                <uc:GradeTemplateControl Label="SB"/>
+                <uc:GradeTemplateControl Label="DEF"/>
+                <uc:GradeTemplateControl Label="DKT"/>
+                <uc:GradeTemplateControl Label="SHBN"/>
+                <uc:GradeTemplateControl Label="M"/>
+            </WrapPanel>
+            <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource YellowButton}" Height="20">Grade</Button>
+            <ComboBox Grid.Row="1" Grid.Column="1" SelectedIndex="0" Style="{StaticResource YellowComboBox}" Margin="5,5,30,5" Height="20">
+                <ComboBoxItem Style="{StaticResource YellowComboBoxItem}">U.S. No.4</ComboBoxItem>
+            </ComboBox>
+            <Grid Grid.Column="2" Grid.RowSpan="2" Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <CheckBox Grid.Row="0" Style="{StaticResource CheckBoxRedText}">ANFL</CheckBox>
+                <CheckBox Grid.Row="1" Style="{StaticResource CheckBoxRedText}">CROT</CheckBox>
+                <CheckBox Grid.Row="2" Style="{StaticResource CheckBoxRedText}">CSTB</CheckBox>
+                <CheckBox Grid.Row="3" Style="{StaticResource CheckBoxRedText}">FSUB</CheckBox>
+                <CheckBox Grid.Row="4" Style="{StaticResource CheckBoxRedText}">GLAS</CheckBox>
+                <CheckBox Grid.Row="5" Style="{StaticResource CheckBoxRedText}">IDK</CheckBox>
+                <CheckBox Grid.Row="6" Style="{StaticResource CheckBoxRedText}">STON</CheckBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
