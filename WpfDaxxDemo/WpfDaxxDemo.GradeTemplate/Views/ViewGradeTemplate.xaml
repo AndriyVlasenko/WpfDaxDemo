@@ -29,9 +29,9 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <WrapPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
-                <uc:GradeTemplateControl Label="TW"/>
-                <uc:GradeTemplateControl Label="WOCL"/>
-                <uc:GradeTemplateControl Label="FM"/>
+                <uc:GradeTemplateControl Label="TW" Text="58"/>
+                <uc:GradeTemplateControl Label="WOCL" Text="0"/>
+                <uc:GradeTemplateControl Label="FM" Text="2"/>
                 <uc:GradeTemplateControl Label="HT"/>
                 <uc:GradeTemplateControl Label="CCL"/>
                 <uc:GradeTemplateControl Label="DE"/>

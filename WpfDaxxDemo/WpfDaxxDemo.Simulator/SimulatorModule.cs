@@ -1,5 +1,6 @@
 ﻿using Prism.Modularity;
 using Prism.Regions;
+using WpfDaxxDemo.Simulator.Views;
 
 namespace WpfDaxxDemo.Simulator
 {

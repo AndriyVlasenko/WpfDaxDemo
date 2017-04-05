@@ -6,6 +6,8 @@ using Prism.Modularity;
 using WpfDaxxDemo.Workstation;
 using WpfDaxxDemo.TruckInDetails;
 using WpfDaxxDemo.GradeTemplate;
+using WpfDaxxDemo.Simulator;
+using WpfDaxxDemo.IntransitList;
 
 namespace WpfDaxxDemo.Shell
 {
@@ -32,6 +34,8 @@ namespace WpfDaxxDemo.Shell
             catalog.AddModule(typeof(WorkstationModule));
             catalog.AddModule(typeof(TruckInDetailsModule));
             catalog.AddModule(typeof(GradeTemplateModule));
+            catalog.AddModule(typeof(SimulatorModule));
+            catalog.AddModule(typeof(IntransitListModule)); 
         }
     }
 }

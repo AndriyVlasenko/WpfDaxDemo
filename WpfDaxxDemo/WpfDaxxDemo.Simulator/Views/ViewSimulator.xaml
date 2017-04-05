@@ -4,9 +4,62 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfDaxxDemo.Simulator.Views"
+             xmlns:control="clr-namespace:WpfDaxxDemo.Simulator.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+             d:DesignHeight="300" d:DesignWidth="500">
+    <UserControl.Resources>
+        <Style TargetType="TextBox" >
+            <Setter Property="FontFamily" Value="Arial Bold"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="#FF4A4A4A"/>
+            <Setter Property="Foreground" Value="Lime"/>
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="DimGray">
+
+        <TabControl >
+            <TabItem Header="Simulator 1, Scale (OUT)" FontFamily="Arial" FontSize="14">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Image Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/03.04.png"/>
+                    <Image Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/0003.png" Height="80"/>
+                    <Image Grid.Row="0"  Margin="230,0,0,0" Source="pack://siteoforigin:,,,/Resources/0008.png" Height="80"/>
+                    <Border Grid.Row="1" Background="Green" Height="20"></Border>
+                    <Grid Grid.Row="2" Margin="0,7,0,0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Weight" Style="{StaticResource RedText}"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Estimated Net" Style="{StaticResource RedText}"/>
+                        <TextBox Grid.Row="1" Grid.Column="0" Text="15180"/>
+                        <TextBox Grid.Row="1" Grid.Column="1"/>
+                        <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" BorderThickness="2" BorderBrush="Gray">
+                            <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="RESERVED FOR CAMERA FEED" TextAlignment="Center" TextWrapping="Wrap"/></StackPanel>
+                        </Border>
+                        <control:SimulatorSemaphore Grid.Row="2" Grid.ColumnSpan="2" IsValid="False" UpString="WEIGHT: 15180" DownString="ADJUST POSITION. PULL FORWARD"/>
+                        <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource YellowButton}">F2-Weight</Button>
+                        <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource YellowButton}">Message</Button>
+                    </Grid>                        
+                </Grid>
+
+            </TabItem>
+            <TabItem Background="Red" Foreground="White" Header="1 Alarm"></TabItem>
+        </TabControl>
     </Grid>
 </UserControl>
